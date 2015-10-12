@@ -48,11 +48,11 @@ Local: .git/config
 
 **$ git status** -> Pending changes in workdir and index.
 
-**$ git show *commit[:file]*** -> (file) status in commit.
+**$ git show _commit[:file]_** -> (file) status in commit.
 
-**$ git show *commit file*** -> File changes in commit.
+**$ git show _commit file_** -> File changes in commit.
 
-**$ git blame *file*** -> Who and when made a change in file.
+**$ git blame _file_** -> Who and when made a change in file.
 
 **$ git reflog** -> History of changes in Tip.
 
@@ -70,7 +70,7 @@ Local: .git/config
 
 **$ git diff *commit1*..*commit2 *[-- *file*]** -> Diff between 2 commits (of a file).
 
-**$ git diff *path* *path*** -> File system diff.
+**$ git diff *path* _path_** -> File system diff.
 
 **$ git difftool** -> Diff with external editor.
 
@@ -81,16 +81,16 @@ Local: .git/config
 
 **$ git remote add *repo_alias repo_path***
 
-**$ git remote rm *repo_alias***
+**$ git remote rm _repo_alias_**
 
-**$ git remote rename *previous_alias new_alias"**
+**$ git remote rename _previous_alias new_alias_**
 
 
 ## Commit
 
-**$ git add *file_or_dir*** -> Adds file changes to index.
+**$ git add _file_or_dir_** -> Adds file changes to index.
 
-**$ git add -u *file_or_dir*** -> Update the index to match the workdir, but adds no new files.
+**$ git add -u _file_or_dir_** -> Update the index to match the workdir, but adds no new files.
 
 **$ git add -A** -> Adds, modifies, and removes index entries to match workdir.
 
@@ -105,9 +105,9 @@ Local: .git/config
 
 **$ git clean** -> Deletes unversioned files from workdir.
 
-**$ git rm *file*** -> Deletes from workdir and index.
+**$ git rm _file_** -> Deletes from workdir and index.
 
-**$ git rm --cached *file*** -> Deletes only from index.
+**$ git rm --cached _file_** -> Deletes only from index.
 
 **$ git reset [*file*]** -> Resets changes from repo to index.
 
@@ -124,28 +124,28 @@ Local: .git/config
 
 ## Push, pull and merge
 
-**$ git fetch *remote branch*** -> Downloads branch changes from remote repo.
+**$ git fetch _remote branch_** -> Downloads branch changes from remote repo.
 
-**$ git pull *remote branch*** -> git fetch && git merge.
+**$ git pull _remote branch_** -> git fetch && git merge.
 
-**$ git pull --rebase *remote branch*** -> git fetch && git rebase.
+**$ git pull --rebase _remote branch_** -> git fetch && git rebase.
 
-**$ git push *remote branch*** -> Sends branch changes to remote repo.
+**$ git push _remote branch_** -> Sends branch changes to remote repo.
 
-**$ git merge *branch*** -> Merges *branch* in current branch.
+**$ git merge _branch_** -> Merges *branch* in current branch.
 
 
 ## Rebase
 
 https://git-scm.com/book/en/v2/Git-Branching-Rebasing
 
-**$ git rebase *branch*** -> Moves commits from current branch after *branch* commits. If there are no conflicts, do git checkout *branch *&& git merge *rama_actual* && git commit -m "msg".
+**$ git rebase _branch_** -> Moves commits from current branch after *branch* commits. If there are no conflicts, do git checkout *branch* && git merge *current_branch* && git commit -m "msg".
 
 **$ git rebase --continue** -> If there are conflicts rebase stops and you have to resolve conflicts manually. Then you can continue the rebase.
 
 **$ git rebase --abort** -> If there are conflicts you can abort the rebase as if nothing has happened.
 
-**$ git rebase -i *branch*** -> Same as first but in interactive mode letting the user edit the list of commits before rebasing.
+**$ git rebase -i _branch_** -> Same as first but in interactive mode letting the user edit the list of commits before rebasing.
 
 
 ## Tags
@@ -154,7 +154,7 @@ https://git-scm.com/book/en/v2/Git-Branching-Rebasing
 
 **$ git tag -l [*pattern*]** -> Lists all tags that satisfies the pattern.
 
-**$ git tag *tag_name*** -> Creates lightweight tag.
+**$ git tag _tag_name_** -> Creates lightweight tag.
 
 **$ git tag -a *tag_name* -m "msg"** -> Creates annotated tag.
 
@@ -167,17 +167,17 @@ https://git-scm.com/book/en/v2/Git-Branching-Rebasing
 
 **$ git branch [--all] [-vv]** -> Lists (all) branches.
 
-**$ git branch *branch*** -> Creates new branch from current branch.
+**$ git branch _branch_** -> Creates new branch from current branch.
 
-**$ git branch -d *branch*** -> Deletes branch.
+**$ git branch -d _branch_** -> Deletes branch.
 
-**$ git checkout *branch*** -> Change to branch loosing uncommited changes.
+**$ git checkout _branch_** -> Change to branch loosing uncommited changes.
 
-**$ git checkout -b *branch*** -> git branch *branch* && git checkout *branch*.
+**$ git checkout -b _branch_** -> git branch *branch* && git checkout *branch*.
 
-**$ git push --set-upstream origin *branch*** -> Creates branch in remote repo.
+**$ git push --set-upstream *remote* _branch_** -> Creates branch in remote repo.
 
-**$ git push origin --delete *branch*** -> Deletes branch in remote repo.
+**$ git push *remote* --delete _branch_** -> Deletes branch in remote repo.
 
 
 ## Stash
@@ -190,11 +190,11 @@ https://git-scm.com/book/en/v2/Git-Branching-Rebasing
 
 **$ git stash apply [*stash_name*]** -> Merges the stash in workdir.
 
-**$ git stash drop *stash_name*** -> Deletes stash from the stack.
+**$ git stash drop _stash_name_** -> Deletes stash from the stack.
 
 **$ git stash pop** -> git stash apply && git stash drop.
 
-**$ git stash branch *branch* *stash_name*** -> Creates a new branch, checkout the commit you were on when you stashed your work, reapplies your work there, and then drops the stash if it applies successfull.
+**$ git stash branch *branch* _stash_name_** -> Creates a new branch, checkout the commit you were on when you stashed your work, reapplies your work there, and then drops the stash if it applies successfull.
 
 
 # Github
@@ -206,7 +206,7 @@ https://hub.github.com
 
 **$ hub clone repo** -> git clone git://github.com/user/repo.git
 
-**$ hub clone *user/repo*** -> git clone git://github.com/user/repo.git
+**$ hub clone _user/repo_** -> git clone git://github.com/user/repo.git
 
 **$ hub browse -- issues** -> Opens https://github.com/user/repo/issues
 

@@ -1,3 +1,3 @@
 # Cheatsheets
 
- * [Git & GitHub](cheatsheets/git_github.md)
+ * [Git & GitHub](cheatsheets/git-github.md)

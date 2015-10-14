@@ -54,7 +54,7 @@ Local: .git/config
 
 **$ git reflog** -> History of changes in Tip.
 
-**$ git log [-n] [--graph] [--oneline]** -> Latest (n) commits in repo.
+**$ git log [-n] [--graph] [--oneline] [--decorate] [--all]** -> Latest (n) commits in repo.
 
 
 ## Differences

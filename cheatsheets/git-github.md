@@ -3,15 +3,13 @@
 
 # Git
 
-https://github.com/oslugr/curso-git
+http://rogerdudler.github.io/git-guide/
 
-http://marklodato.github.io/visual-git-guide/index-en.html
+https://www.atlassian.com/git/tutorials
 
 https://git-scm.com/docs
 
 https://git-scm.com/book/en/v2
-
-https://www.atlassian.com/git/tutorials
 
 
 ## Configuration

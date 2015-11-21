@@ -107,17 +107,17 @@ Local: .git/config
 
 **$ git rm --cached _file_** -> Deletes only from index.
 
-**$ git reset [*file*]** -> Resets changes from repo to index.
-
 **$ git checkout [*file*]** -> Restores file from index to workdir.
 
 **$ git checkout -- _filename_** -> Restores file from repo to workdir without modifying the index.
 
 **$ git checkout [*commit*]** -> Restores changes from repo to index and workdir.
 
-**$ git reset --soft [*commit*]** -> Reset current branch to commit leaving changes in workdir.
+**$ git reset [*file*]** -> Resets changes from repo to index.
 
-**$ git reset --mixed [*commit*]** -> Idem in index.
+**$ git reset --soft [*commit*]** -> Reset current branch to commit leaving changes in index.
+
+**$ git reset --mixed [*commit*]** -> Idem in workdir.
 
 **$ git reset --hard [*commit*]**  -> Idem deleting all changes.
 

@@ -46,9 +46,7 @@ Local: .git/config
 
 **$ git status** -> Pending changes in workdir and index.
 
-**$ git show _commit[:file]_** -> (file) status in commit.
-
-**$ git show _commit file_** -> File changes in commit.
+**$ git show _commit [:file]_** -> (file) status in commit.
 
 **$ git blame _file_** -> Who and when made a change in file.
 
